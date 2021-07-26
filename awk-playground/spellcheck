@@ -1,0 +1,2 @@
+AWKLIB=$(pwd)
+nawk -f $AWKLIB/spellcheck.awk $*

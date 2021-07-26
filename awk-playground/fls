@@ -1,0 +1,7 @@
+# The $* variable is used by the shell and expands to all arguments passed from the command line.
+# (We could use $1 here, which would pass the ﬁrst argument, but passing all the arguments provides greater ﬂexibility.) 
+# These arguments can be the names of ﬁles or directories or additional options to the ls command.
+# If no arguments are speciﬁed, the “$*” will be empty and the current directory will be listed.
+ls -l $* | awk '{
+  print $5, "\t", $9
+}'

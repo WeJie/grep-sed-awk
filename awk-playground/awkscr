@@ -1,0 +1,12 @@
+# test for integer, string or empty line.
+/[0-9]+/    { print "That is an integer" }
+/[A-Za-z]+/ { print "This is a string" }
+# blank.awk -- Print message for each blank line.
+/^$/        { print "This is a blank line." }
+# Count Blank lines.
+/^$/ {
+  ++x
+}
+END {
+  print x
+}
